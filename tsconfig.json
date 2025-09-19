@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Ambiente Node.js moderno
+    "module": "NodeNext",       // melhor que "es6" pra Node
+    "moduleResolution": "NodeNext",
+    "target": "ES2022",
+    "lib": ["ES2022"],          // garante compatibilidade com APIs modernas
+    "types": ["node"],          // habilita tipagens do Node
+
+    // Outras opções úteis
+    "sourceMap": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Pode deixar o resto se quiser, mas:
+    "verbatimModuleSyntax": false, // <- DESLIGUE se não quiser ter que usar extensão em todo import
+    "isolatedModules": true
+  }
+}

@@ -1,0 +1,8 @@
+npm i -g typescript -- instala versão global do typescript
+npm init -- instala package.json
+npm install -g ts-node typescript -- permite que rode ts sem necessidade de gerar js
+npx tsc --init -- cria o tsconfig.json
+npm install --save-dev @types/node -- instala as tipagem do node.js
+npm install prompt-sync -- instala
+ npm install sqlite3
+

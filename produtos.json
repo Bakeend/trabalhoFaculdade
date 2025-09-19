@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "produto": "Pizza queijo",
+    "tipo": "pizza",
+    "valor": 10,
+    "quantidade": 999
+  }
+]
