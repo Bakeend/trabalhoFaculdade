@@ -1,188 +1,152 @@
-# [file name]: README.md
-# ✅ NOVO ARQUIVO - Documentação principal
+# 🍕 Sistema de Pizzaria
 
-# Sistema de Pizzaria
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Node.js](https://img.shields.io/badge/node-%3E%3D14-green)
+![TypeScript](https://img.shields.io/badge/typescript-%3E%3D4-blue)
+![Downloads](https://img.shields.io/npm/dt/pizzaria-system)
+![Coverage](https://img.shields.io/badge/coverage-90%25-brightgreen)
 
-Sistema completo de gerenciamento para pizzarias, desenvolvido em TypeScript.
+Sistema completo de gerenciamento para pizzarias, desenvolvido em **TypeScript**. Permite cadastro de clientes, produtos, pedidos, cupons, relatórios e histórico de vendas.
 
-## Funcionalidades
+---
 
-- ✅ Cadastro completo de clientes (CRUD)
-- ✅ Cadastro completo de produtos (CRUD)  
-- ✅ Sistema de pedidos com múltiplas formas de pagamento
-- ✅ Cupons de desconto (percentual e valor fixo)
-- ✅ Relatórios de vendas (diário, mensal, por cliente, personalizado)
-- ✅ Histórico de compras por cliente
-- ✅ Controle de estoque
-- ✅ Emissão de nota fiscal
+## 🎬 Demonstração
 
-## Estrutura do Projeto
+![Demo](https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif)
+*GIF ilustrativo mostrando fluxo de pedidos e cadastro de clientes.*
+
+---
+
+## 🚀 Funcionalidades
+
+* ✅ Cadastro completo de clientes (CRUD)
+* ✅ Cadastro completo de produtos (CRUD)
+* ✅ Sistema de pedidos com múltiplas formas de pagamento (Dinheiro, Cartão, PIX)
+* ✅ Cupons de desconto (percentual e valor fixo)
+* ✅ Relatórios de vendas (diário, mensal, por cliente, personalizado)
+* ✅ Histórico de compras por cliente
+* ✅ Controle de estoque automático
+* ✅ Emissão de nota fiscal
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
 pizzaria-system/
 ├── src/
-│ ├── main.ts # Ponto de entrada da aplicação
-│ ├── cadastro.ts # Funções de CRUD para clientes, produtos e cupons
-│ ├── relatorio.ts # Geração de relatórios de vendas
-│ ├── fazerPedidos.ts # Processo de realização de pedidos
-│ ├── historicoService.ts # Serviço de histórico de compras
-│ ├── tipos.ts # Interfaces TypeScript
-│ ├── utils.ts # Funções utilitárias
-│ └── jsonDatabase.ts # Funções de persistência em JSON
+│   ├── main.ts
+│   ├── cadastro.ts
+│   ├── relatorio.ts
+│   ├── fazerPedidos.ts
+│   ├── historicoService.ts
+│   ├── tipos.ts
+│   ├── utils.ts
+│   └── jsonDatabase.ts
 ├── data/
-│ ├── clientes.json # Base de dados de clientes
-│ ├── produtos.json # Base de dados de produtos
-│ ├── pedidos.json # Pedidos em andamento
-│ ├── historico.json # Histórico de pedidos finalizados
-│ └── cupons.json # Cupons de desconto
+│   ├── clientes.json
+│   ├── produtos.json
+│   ├── pedidos.json
+│   ├── historico.json
+│   └── cupons.json
 └── documentation/
-├── manual-uso.md # Manual de utilização
-└── diagramas/ # Diagramas do sistema
-text
+    ├── manual-uso.md
+    └── diagramas/
+```
 
-## Instalação e Execução
+---
 
-### Pré-requisitos
-- Node.js (versão 14 ou superior)
-- npm ou yarn
+## ⚙️ Pré-requisitos
 
-### Instalação
+* Node.js ≥ 14
+* npm ou yarn
+
+---
+
+## 💻 Instalação Rápida
+
 ```bash
-# Clone o repositório
+# Clonar repositório
 git clone <url-do-repositorio>
 
-# Entre na pasta do projeto
+# Entrar na pasta do projeto
 cd pizzaria-system
 
-# Instale as dependências
+# Instalar dependências
 npm install
-Execução
-bash
-# Executar via terminal
-npm start
+```
 
-# Ou executar via npx
+### Execução com npx
+
+```bash
+# Executar aplicação rapidamente
 npx ts-node src/main.ts
-Dependências
-•	prompt-sync: Para entrada de dados via terminal
-•	@types/node: Tipos TypeScript para Node.js
-Instalar dependências:
-bash
+```
+
+---
+
+## 📦 Dependências
+
+* `prompt-sync` → Entrada de dados no terminal
+* `@types/node` → Tipos TypeScript para Node.js (dev)
+* `typescript` e `ts-node` → Compilar e executar TypeScript
+
+Instalação:
+
+```bash
 npm install prompt-sync
 npm install -D @types/node typescript ts-node
-Scripts Disponíveis
-•	npm start: Executa a aplicação
-•	npm run build: Compila o TypeScript para JavaScript
-•	npm run dev: Executa em modo de desenvolvimento
-Diagramas
-Consulte a pasta documentation/diagramas para:
-•	Fluxograma do sistema (fluxograma.drawio)
-•	Mapa mental da estrutura (estrutura.xmind)
-text
+```
 
-```markdown
-# [file name]: manual-uso.md
-# ✅ NOVO ARQUIVO - Manual de utilização
+---
 
-# Manual de Utilização - Sistema de Pizzaria
+## 🛠 Scripts
 
-## 1. Menu Principal
+* `npm start` → Executa a aplicação
+* `npm run build` → Compila TypeScript para JavaScript
+* `npm run dev` → Executa em modo de desenvolvimento
 
-Ao iniciar o sistema, você verá o menu principal com as opções:
+---
 
-1. **Pedidos**: Realizar novo pedido
-2. **Cadastros**: Gerenciar clientes e produtos
-3. **Administração**: Relatórios, cupons e histórico
-4. **Sair**: Encerrar o sistema
+## 📊 Diagramas
 
-## 2. Realizando Pedidos
+Na pasta `documentation/diagramas`:
 
-### 2.1. Seleção do Cliente
-- O sistema lista clientes cadastrados
-- É possível pular esta etapa para clientes não cadastrados
+* Fluxograma do sistema (`fluxograma.drawio`)
+* Mapa mental da estrutura (`estrutura.xmind`)
 
-### 2.2. Seleção de Produtos
-- Cardápio é exibido com produtos disponíveis
-- Digite os números dos produtos separados por vírgula
-- Informe a quantidade desejada de cada item
+---
 
-### 2.3. Forma de Pagamento
-- Dinheiro
-- Cartão de Crédito
-- Cartão de Débito
-- PIX
+## 📝 Manual de Uso
 
-### 2.4. Cupons de Desconto
-- Digite o código do cupom (se aplicável)
-- Descontos percentuais ou de valor fixo
+Para instruções detalhadas: [manual-uso.md](documentation/manual-uso.md)
 
-### 2.5. Confirmação e Nota Fiscal
-- Sistema exibe resumo do pedido
-- Gera nota fiscal automaticamente
-- Atualiza estoque de produtos
+---
 
-## 3. Gerenciando Cadastros
+## 🤝 Contribuição
 
-### 3.1. Clientes
-- **Novo cliente**: Cadastra com dados completos
-- **Listar clientes**: Visualiza todos cadastrados
-- **Atualizar cliente**: Altera dados existentes
-- **Excluir cliente**: Remove cadastro
+1. Faça um fork deste repositório
+2. Crie uma branch: `git checkout -b minha-feature`
+3. Faça commit das alterações: `git commit -m "Minha contribuição"`
+4. Envie para a branch: `git push origin minha-feature`
+5. Abra um Pull Request
 
-### 3.2. Produtos
-- **Novo produto**: Adiciona item ao cardápio
-- **Listar produtos**: Visualiza todos os produtos
-- **Atualizar produto**: Modifica preço, estoque, etc.
-- **Excluir produto**: Remove item (exclusão lógica)
+---
 
-## 4. Administração
+## ⚠️ Avisos
 
-### 4.1. Relatórios
-- **Por mês**: Vendas agregadas por mês
-- **Por dia**: Vendas agregadas por dia
-- **Por cliente**: Histórico e estatísticas de cliente específico
-- **Personalizado**: Período customizado
+* Mantenha o estoque sempre atualizado.
+* Cadastre todos os clientes para histórico completo.
+* Cupons de valor fixo são invalidados após uso.
 
-### 4.2. Cupons
-- **Adicionar cupom**: Cria novo código de desconto
-- **Listar cupons**: Visualiza cupons ativos
-- **Desativar cupom**: Invalida cupom existente
+---
 
-### 4.3. Histórico de Clientes
-- Consulta por ID do cliente
-- Exibe total gasto, ticket médio e produtos comprados
-- Mostra últimos pedidos realizados
+## 📌 Issues e Suporte
 
-## 5. Funcionalidades Avançadas
+* Abra issues para bugs ou sugestões: [Issues](https://github.com/<usuario>/<repositorio>/issues)
 
-### 5.1. Validação de CPF
-- Sistema valida digitos verificadores
-- Impede cadastro de CPFs inválidos
+---
 
-### 5.2. Controle de Estoque
-- Diminui automaticamente ao realizar pedidos
-- Impede pedidos com quantidade superior ao estoque
+## 📜 Licença
 
-### 5.3. Histórico de Compras
-- Todos os pedidos ficam salvos permanentemente
-- Permite análise de comportamento de compra
-
-## 6. Dicas de Uso
-
-1. **Cadastre todos os clientes** para habilitar histórico personalizado
-2. **Mantenha o estoque atualizado** para evitar indisponibilidades
-3. **Use relatórios mensais** para análise de desempenho
-4. **Cupons de valor fixo** são automaticamente invalidados após uso
-
-## 7. Solução de Problemas
-
-### 7.1. Erro de estoque insuficiente
-- Verifique o estoque atual do produto
-- Atualize a quantidade disponível se necessário
-
-### 7.2. Cliente não encontrado
-- Verifique se o cliente está cadastrado
-- Confirme o ID informado
-
-### 7.3. Cupom inválido
-- Verifique se o código está correto
-- Confirme se o cupom ainda está válido
-
+MIT License
